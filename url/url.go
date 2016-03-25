@@ -17,7 +17,9 @@ type URL struct {
 }
 
 var (
-	schemePrefix = regexp.MustCompile("^([a-zA-Z]+:)?(//)")
+	// schemePrefix is based off of the origin net.URL getParse pattern
+	// https://golang.org/src/net/url/url.go#L371
+	schemePrefix = regexp.MustCompile("^([a-zA-Z][a-zA-Z0-9+-.]+:)?(//)")
 
 	// shortcut to url.Parse
 	parse = url.Parse
