@@ -1,6 +1,6 @@
 language: go
 go:
-  - "1.0"
+  # - "1.0" issue with the regex here
   - "1.1"
   - "1.2"
   - "1.3"
