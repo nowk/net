@@ -9,6 +9,7 @@ import (
 func TestParseReturnsAUrlWithPort(t *testing.T) {
 	var cases = [][]string{
 		{"http://example.com:8080", "http"},
+		{"HTTP://example.com:8080", "http"},
 		{"//example.com:8080", ""},
 		{"example.com:8080", ""},
 	}
@@ -44,6 +45,7 @@ func TestParseReturnsAUrlWithPort(t *testing.T) {
 func TestParseReturnsAUrl(t *testing.T) {
 	var cases = [][]string{
 		{"http://example.com", "http"},
+		{"HTTP://example.com", "http"},
 		{"//example.com", ""},
 		{"example.com", ""},
 	}
