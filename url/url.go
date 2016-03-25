@@ -17,7 +17,7 @@ type URL struct {
 }
 
 var (
-	schemePrefix = regexp.MustCompile("([a-z]+:)?(//)")
+	schemePrefix = regexp.MustCompile("^([a-z]+:)?(//)")
 
 	// shortcut to url.Parse
 	parse = url.Parse
